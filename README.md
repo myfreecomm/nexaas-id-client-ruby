@@ -20,7 +20,7 @@ This client only uses the API of Nexaas ID. To authenticate users via OAuth2 in 
 
 Add this line to your application's Gemfile:
 
-    gem 'nexaas-id-client', require: 'nexaas_id'
+    gem 'nexaas_id-client', require: 'nexaas_id'
 
 And then execute:
 
@@ -28,7 +28,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nexaas-id-client
+    $ gem install nexaas_id-client
 
 ## Support
 
