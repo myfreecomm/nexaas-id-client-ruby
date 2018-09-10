@@ -46,8 +46,8 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":"57bb5938-d0c5-439a-9986-e5c565124beb","name":"PassaporteWeb
+      string: '{"id":"57bb5938-d0c5-439a-9986-e5c565124beb","name":"Nexaas ID
         API Test","nickname":"pw.api.test","email":"luiz.buiatte+pw.api.test@nexaas.com","birth":"2018-08-09","gender":"other","language":"en","picture":"https://sandbox.id.nexaas.com/images/avatar/57bb5938-d0c5-439a-9986-e5c565124beb?size=140","timezone":"America/Sao_Paulo","country":"BR","city":"","bio":""}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 21 Aug 2018 19:15:34 GMT
 recorded_with: VCR 2.9.3
