@@ -1,0 +1,2 @@
+module NexaasID::Client
+end

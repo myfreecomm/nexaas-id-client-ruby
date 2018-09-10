@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.v2.passaporteweb.com.br/oauth/token
+    uri: https://sandbox.id.nexaas.com/oauth/token
     body:
       encoding: UTF-8
       string: client_id=QMKAZVAZ6NBR3IO2MCEHOGKVCY&client_secret=HXKQYGAQ4JHR5HR73SKOQ5NI6E&grant_type=client_credentials&scope=invite
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 13 Aug 2018 20:30:20 GMT
+      - Tue, 21 Aug 2018 19:15:38 GMT
       Connection:
       - keep-alive
       Cache-Control:
@@ -33,11 +33,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3b7bf2d73eea97721e49f0491bd69ff5"
+      - W/"cca2790160d81e73bbb5a7a991e52794"
       X-Request-Id:
-      - 45822c63-da2a-482d-a1df-faf5ab48bb6e
+      - 37b7e919-0369-42e2-ae5a-99aef5a54bdf
       X-Runtime:
-      - '0.015522'
+      - '0.018634'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -46,12 +46,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"access_token":"a959f6f2caf5d078cfaaf60dd32a3bd358bb81f32121f38d1ae8b85504673a9d","token_type":"bearer","expires_in":7200,"scope":"invite","created_at":1534192220}'
+      string: '{"access_token":"78e6cc73f6b9a2011b1ea019d3bb8335ecca4880c66a3b06d54e3e9461e63113","token_type":"bearer","expires_in":7200,"scope":"invite","created_at":1534878939}'
     http_version: 
-  recorded_at: Mon, 13 Aug 2018 20:30:20 GMT
+  recorded_at: Tue, 21 Aug 2018 19:15:37 GMT
 - request:
     method: post
-    uri: https://sandbox.v2.passaporteweb.com.br/api/v1/sign_up
+    uri: https://sandbox.id.nexaas.com/api/v1/sign_up
     body:
       encoding: UTF-8
       string: '{"invited":"demurtas@mailinator.com"}'
@@ -63,7 +63,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.12.2
       Authorization:
-      - Bearer a959f6f2caf5d078cfaaf60dd32a3bd358bb81f32121f38d1ae8b85504673a9d
+      - Bearer 78e6cc73f6b9a2011b1ea019d3bb8335ecca4880c66a3b06d54e3e9461e63113
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -74,19 +74,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 13 Aug 2018 20:30:20 GMT
+      - Tue, 21 Aug 2018 19:15:39 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ed5147c554a8139f288875111fa84458"
+      - W/"e1d3f63a5bcfb570e6c33e6b59b299de"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a582912-8b2a-447a-b51d-0f67d5c941a1
+      - bda14004-ca39-4d09-94f9-64331d3facd2
       X-Runtime:
-      - '0.040819'
+      - '0.042995'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -95,7 +95,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":"d54d41c0-4d0f-4270-97fa-140b076f5c34","email":"demurtas@mailinator.com","requester":null}'
+      string: '{"id":"7435b7ac-0171-4306-b01b-593eb6aef500","email":"demurtas@mailinator.com","requester":null}'
     http_version: 
-  recorded_at: Mon, 13 Aug 2018 20:30:21 GMT
+  recorded_at: Tue, 21 Aug 2018 19:15:38 GMT
 recorded_with: VCR 2.9.3

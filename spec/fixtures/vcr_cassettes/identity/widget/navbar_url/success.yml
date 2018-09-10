@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.v2.passaporteweb.com.br/api/v1/widgets/navbar?access_token=80f401056b3493cf9dee19f74d1d6fdcf614cb4761563118d1b39b7108baad87
+    uri: https://sandbox.id.nexaas.com/api/v1/widgets/navbar?access_token=6cf4f0b92293cdef5291b1d3f6509996e0caf5b4c0ad01a88c7cec48a2c6daba
     body:
       encoding: US-ASCII
       string: ''
@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 13 Aug 2018 18:11:04 GMT
+      - Tue, 21 Aug 2018 19:15:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - text/javascript; charset=utf-8
       Etag:
-      - W/"099bebe7db7f0a8a23bc89dfeed905a3"
+      - W/"64a5fa4eaadfe44f6449c6d793993d69"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0b149898-c835-4870-b4c4-bb98571f5c61
+      - 952a9834-692a-460f-9fd0-40fa8c15e591
       X-Runtime:
-      - '0.105660'
+      - '0.024244'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -44,7 +44,7 @@ http_interactions:
       encoding: UTF-8
       string: |
         function createNavbar() {
-          var html = '<nav style="position: fixed !important; top: 0 !important; left: 0 !important; box-sizing: border-box; padding-right: 10px; display: flex; align-items: center; width: 100%; height: 32px; font-size: 14px; color: #fff; background-color: #242633; z-index: 9999; "> <a href="https://sandbox.v2.passaporteweb.com.br/profile" style="display: flex; align-items: center; height: 32px; color: #fff; text-decoration: none; border-right: 1px solid rgba(255, 255, 255, .1)"> <img src="https://sandbox.v2.passaporteweb.com.br/assets/icon-pw-50bd99fa76df201cea0028e55b76964074c4b8605dfe89f7a53965170a9afae1.png" height="12px" style="padding-left: 10px; padding-right: 12px;")></img> </a> <span style="padding-left: 10px; font-family: sans-serif; color: #989cab; font-size: 13px;">Test application</span> <button id="pw2-dropdown-button" type="button" style="display: flex; align-items: center; margin-left: auto; background-color: transparent; border: none; cursor: pointer; outline: 0;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.v2.passaporteweb.com.br/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="20" height="20" /> <span style="color: #fff; font-size: 13px;"> PassaporteWeb API Test </span> <span style="margin-left: 10px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #575a6d;"></span> </button> <div style="display: none; position: absolute; top: 42px; right: 10px;"> <ul style="list-style: none; margin: 0; padding: 0; background-color: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); z-index: 9999;"> <li style="padding: 15px 20px;"> <a href="https://sandbox.v2.passaporteweb.com.br/profile" style="font-family: sans-serif; color: #666; text-decoration: none;"> <div style="display: flex; align-items: center;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.v2.passaporteweb.com.br/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="60" height="60" /> <div> <strong>Passaporte Web API Test</strong> <p style="margin: 0;">luiz.buiatte+pw.api.test@nexaas.com</p> </div> </div> </a> </li> <li style="padding: 15px 20px; text-align: right; background-color: #f7f6f6; border-top: 1px solid #eee;"> <a style="font-family: sans-serif; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #666;" href="https://sandbox.v2.passaporteweb.com.br/applications/sign_out?access_token=80f401056b3493cf9dee19f74d1d6fdcf614cb4761563118d1b39b7108baad87">Sair</a> </li> </ul> </div> </nav>';
+          var html = '<nav style="position: fixed !important; top: 0 !important; left: 0 !important; box-sizing: border-box; padding-right: 10px; display: flex; align-items: center; width: 100%; height: 32px; font-size: 14px; color: #fff; background-color: #242633; z-index: 9999; "> <a href="https://sandbox.id.nexaas.com/profile" style="display: flex; align-items: center; height: 32px; color: #fff; text-decoration: none; border-right: 1px solid rgba(255, 255, 255, .1)"> <img src="https://sandbox.id.nexaas.com/assets/icon-pw-50bd99fa76df201cea0028e55b76964074c4b8605dfe89f7a53965170a9afae1.png" height="12px" style="padding-left: 10px; padding-right: 12px;")></img> </a> <span style="padding-left: 10px; font-family: sans-serif; color: #989cab; font-size: 13px;">Test application</span> <button id="pw2-dropdown-button" type="button" style="display: flex; align-items: center; margin-left: auto; background-color: transparent; border: none; cursor: pointer; outline: 0;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.id.nexaas.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="20" height="20" /> <span style="color: #fff; font-size: 13px;"> PassaporteWeb API Test </span> <span style="margin-left: 10px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #575a6d;"></span> </button> <div style="display: none; position: absolute; top: 42px; right: 10px;"> <ul style="list-style: none; margin: 0; padding: 0; background-color: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); z-index: 9999;"> <li style="padding: 15px 20px;"> <a href="https://sandbox.id.nexaas.com/profile" style="font-family: sans-serif; color: #666; text-decoration: none;"> <div style="display: flex; align-items: center;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.id.nexaas.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="60" height="60" /> <div> <strong>Passaporte Web API Test</strong> <p style="margin: 0;">luiz.buiatte+pw.api.test@nexaas.com</p> </div> </div> </a> </li> <li style="padding: 15px 20px; text-align: right; background-color: #f7f6f6; border-top: 1px solid #eee;"> <a style="font-family: sans-serif; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #666;" href="https://sandbox.id.nexaas.com/applications/sign_out?access_token=6cf4f0b92293cdef5291b1d3f6509996e0caf5b4c0ad01a88c7cec48a2c6daba">Sair</a> </li> </ul> </div> </nav>';
 
           var htmlObject  = document.createElement('div');
           htmlObject.innerHTML = html;
@@ -68,74 +68,5 @@ http_interactions:
 
         document.addEventListener("DOMContentLoaded", createNavbar);
     http_version: 
-  recorded_at: Mon, 13 Aug 2018 18:11:05 GMT
-- request:
-    method: get
-    uri: https://sandbox.v2.passaporteweb.com.br/api/v1/widgets/navbar?access_token=af086644fd91bf2f2365110f74ff02187fe3fd79686312f702af7f45d988154b
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.12.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 13 Aug 2018 20:30:23 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/javascript; charset=utf-8
-      Etag:
-      - W/"ea127366657bde268b695e4d8cf4935b"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ade82962-d10b-4940-a6f0-db29527e3ba5
-      X-Runtime:
-      - '0.019629'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: |
-        function createNavbar() {
-          var html = '<nav style="position: fixed !important; top: 0 !important; left: 0 !important; box-sizing: border-box; padding-right: 10px; display: flex; align-items: center; width: 100%; height: 32px; font-size: 14px; color: #fff; background-color: #242633; z-index: 9999; "> <a href="https://sandbox.v2.passaporteweb.com.br/profile" style="display: flex; align-items: center; height: 32px; color: #fff; text-decoration: none; border-right: 1px solid rgba(255, 255, 255, .1)"> <img src="https://sandbox.v2.passaporteweb.com.br/assets/icon-pw-50bd99fa76df201cea0028e55b76964074c4b8605dfe89f7a53965170a9afae1.png" height="12px" style="padding-left: 10px; padding-right: 12px;")></img> </a> <span style="padding-left: 10px; font-family: sans-serif; color: #989cab; font-size: 13px;">Test application</span> <button id="pw2-dropdown-button" type="button" style="display: flex; align-items: center; margin-left: auto; background-color: transparent; border: none; cursor: pointer; outline: 0;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.v2.passaporteweb.com.br/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="20" height="20" /> <span style="color: #fff; font-size: 13px;"> PassaporteWeb API Test </span> <span style="margin-left: 10px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #575a6d;"></span> </button> <div style="display: none; position: absolute; top: 42px; right: 10px;"> <ul style="list-style: none; margin: 0; padding: 0; background-color: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); z-index: 9999;"> <li style="padding: 15px 20px;"> <a href="https://sandbox.v2.passaporteweb.com.br/profile" style="font-family: sans-serif; color: #666; text-decoration: none;"> <div style="display: flex; align-items: center;"> <img style="border-radius: 100%; margin-right: 10px;" src="https://sandbox.v2.passaporteweb.com.br/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6TnpsbE1EWmpOaTA1WldRekxUUXhNMlV0T0RJMU1pMDVOelF6TW1GbU16TXhNallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--7a402c14ed023a568bbc01c301436d0b46521345/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRRd2VERTBNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b7c6c56ddca6c1f35a16553c3b17a292f1ded451/1_lAR9Uh_gJ7dp23e0vhy5Hg.png" width="60" height="60" /> <div> <strong>Passaporte Web API Test</strong> <p style="margin: 0;">luiz.buiatte+pw.api.test@nexaas.com</p> </div> </div> </a> </li> <li style="padding: 15px 20px; text-align: right; background-color: #f7f6f6; border-top: 1px solid #eee;"> <a style="font-family: sans-serif; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #666;" href="https://sandbox.v2.passaporteweb.com.br/applications/sign_out?access_token=af086644fd91bf2f2365110f74ff02187fe3fd79686312f702af7f45d988154b">Sair</a> </li> </ul> </div> </nav>';
-
-          var htmlObject  = document.createElement('div');
-          htmlObject.innerHTML = html;
-
-          document.body.insertBefore(htmlObject, document.body.firstChild);
-
-          document.addEventListener('click', function(event) {
-            var button = document.getElementById('pw2-dropdown-button');
-            var dropdownMenu = button.nextElementSibling;
-
-            if ( event.target === button || event.target.parentElement === button ) {
-              var newStatus = dropdownMenu.style.display == "none" ? "block" : "none";
-              dropdownMenu.style.display = newStatus;
-            } else if ( event.target.offsetParent === dropdownMenu) {
-              return;
-            } else {
-              dropdownMenu.style.display = 'none';
-            }
-          });
-        }
-
-        document.addEventListener("DOMContentLoaded", createNavbar);
-    http_version: 
-  recorded_at: Mon, 13 Aug 2018 20:30:23 GMT
+  recorded_at: Tue, 21 Aug 2018 19:15:40 GMT
 recorded_with: VCR 2.9.3

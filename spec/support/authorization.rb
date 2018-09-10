@@ -3,7 +3,7 @@ require 'faraday-cookie_jar'
 module Authorization
 
   def authorization_code
-    connection = Faraday.new(url: PassaporteWeb.configuration.url) do |builder|
+    connection = Faraday.new(url: NexaasID.configuration.url) do |builder|
       builder.use :cookie_jar
       builder.adapter Faraday.default_adapter
     end
@@ -18,14 +18,14 @@ module Authorization
     connection.post('/sign_in', URI.encode_www_form(data))
 
     response = connection.get('oauth/authorize',
-                              client_id: PassaporteWeb.configuration.application_token,
+                              client_id: NexaasID.configuration.application_token,
                               redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',
                               response_type: 'code',
                               scope: 'profile invite')
 
     if(response.headers['location'].nil? || response.headers['location'] == '')
       data = {
-        client_id: PassaporteWeb.configuration.application_token,
+        client_id: NexaasID.configuration.application_token,
         commit: 'Authorize',
         redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',
         response_type: 'code',
@@ -45,7 +45,7 @@ module Authorization
 
   def access_token
     VCR.use_cassette('access_token') do
-      client = PassaporteWeb::Client::OAuth.build
+      client = NexaasID::Client::OAuth.build
       client.auth_code.get_token(authorization_code, redirect_uri: 'urn:ietf:wg:oauth:2.0:oob')
     end
   end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.v2.passaporteweb.com.br/api/v1/sign_up
+    uri: https://sandbox.id.nexaas.com/api/v1/sign_up
     body:
       encoding: UTF-8
       string: '{"invited":"demurtas@mailinator.com"}'
@@ -14,7 +14,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.12.2
       Authorization:
-      - Bearer af086644fd91bf2f2365110f74ff02187fe3fd79686312f702af7f45d988154b
+      - Bearer 6cf4f0b92293cdef5291b1d3f6509996e0caf5b4c0ad01a88c7cec48a2c6daba
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -25,19 +25,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 13 Aug 2018 20:30:22 GMT
+      - Tue, 21 Aug 2018 19:15:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"eefb3bb5c520cd24c45477ff1b878f57"
+      - W/"3d045b7d066b6212cf03bcb8dee1e258"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a5ce01c9-ec2a-4bbf-878e-2f81cce89467
+      - d8649bf3-f1b8-4fd2-8df2-b2234053e558
       X-Runtime:
-      - '0.039395'
+      - '0.033277'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -46,7 +46,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":"d54d41c0-4d0f-4270-97fa-140b076f5c34","email":"demurtas@mailinator.com","requester":"57bb5938-d0c5-439a-9986-e5c565124beb"}'
+      string: '{"id":"7435b7ac-0171-4306-b01b-593eb6aef500","email":"demurtas@mailinator.com","requester":"57bb5938-d0c5-439a-9986-e5c565124beb"}'
     http_version: 
-  recorded_at: Mon, 13 Aug 2018 20:30:22 GMT
+  recorded_at: Tue, 21 Aug 2018 19:15:40 GMT
 recorded_with: VCR 2.9.3

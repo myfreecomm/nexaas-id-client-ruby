@@ -1,0 +1,2 @@
+module NexaasID::Entities
+end

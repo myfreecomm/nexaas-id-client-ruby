@@ -2,7 +2,7 @@ require "bundler/gem_tasks"
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  rdoc.title = 'passaporteweb-client-ruby'
+  rdoc.title = 'nexaas-id-client-ruby'
   rdoc.main = "README.rdoc"
   rdoc.rdoc_dir = 'doc'
   rdoc.rdoc_files.include("README.rdoc","lib/**/*.rb")

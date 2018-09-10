@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    passaporteweb-client (0.5.0)
+    nexaas-id-client (0.5.0)
       multi_json (~> 1.11)
       oauth2 (~> 1.4.0)
       virtus (~> 1.0)
@@ -64,7 +64,7 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
-    public_suffix (3.0.1)
+    public_suffix (3.0.3)
     rack (2.0.5)
     rake (12.0.0)
     rdoc (6.0.4)
@@ -102,7 +102,7 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    webmock (3.1.1)
+    webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -117,14 +117,14 @@ DEPENDENCIES
   dotenv (~> 2.5.0)
   faraday-cookie_jar (~> 0.0.6)
   json (~> 2.1)
-  passaporteweb-client!
+  nexaas-id-client!
   pry-byebug (~> 3.4)
   rake (~> 12.0)
   rdoc (~> 6.0)
   rspec (~> 3.6)
   simplecov (~> 0.14)
   vcr (~> 2.4)
-  webmock (~> 3.1.0, >= 3.1.1)
+  webmock (~> 3.4)
 
 BUNDLED WITH
    1.16.3

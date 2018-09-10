@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.v2.passaporteweb.com.br/api/v1/profile/emails
+    uri: https://sandbox.id.nexaas.com/api/v1/profile/emails
     body:
       encoding: US-ASCII
       string: ''
@@ -14,7 +14,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.12.2
       Authorization:
-      - Bearer af086644fd91bf2f2365110f74ff02187fe3fd79686312f702af7f45d988154b
+      - Bearer 6cf4f0b92293cdef5291b1d3f6509996e0caf5b4c0ad01a88c7cec48a2c6daba
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 13 Aug 2018 20:30:19 GMT
+      - Tue, 21 Aug 2018 19:15:37 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -35,9 +35,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 26251e68-98c0-4bbe-87ac-3d3477e9d7e7
+      - 5044c31b-0e68-4f40-8a2b-0477fd9fd3d6
       X-Runtime:
-      - '0.013379'
+      - '0.016047'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Transfer-Encoding:
@@ -48,5 +48,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":"57bb5938-d0c5-439a-9986-e5c565124beb","emails":["luiz.buiatte+pw.api.test@nexaas.com"]}'
     http_version: 
-  recorded_at: Mon, 13 Aug 2018 20:30:19 GMT
+  recorded_at: Tue, 21 Aug 2018 19:15:37 GMT
 recorded_with: VCR 2.9.3
