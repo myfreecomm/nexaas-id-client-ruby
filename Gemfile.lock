@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nexaas-id-client (0.5.0)
+    nexaas_id-client (0.5.0)
       multi_json (~> 1.11)
       oauth2 (~> 1.4.0)
       virtus (~> 1.0)
@@ -117,7 +117,7 @@ DEPENDENCIES
   dotenv (~> 2.5.0)
   faraday-cookie_jar (~> 0.0.6)
   json (~> 2.1)
-  nexaas-id-client!
+  nexaas_id-client!
   pry-byebug (~> 3.4)
   rake (~> 12.0)
   rdoc (~> 6.0)
@@ -127,4 +127,4 @@ DEPENDENCIES
   webmock (~> 3.4)
 
 BUNDLED WITH
-   1.16.3
+   1.16.4

@@ -6,7 +6,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require File.join([File.dirname(__FILE__),'lib','nexaas_id','version.rb'])
 
 Gem::Specification.new do |spec|
-  spec.name          = "nexaas-id-client"
+  spec.name          = "nexaas_id-client"
   spec.version       = NexaasID::VERSION
   spec.authors       = ["Rodrigo Tassinari de Oliveira", "Eduardo Hertz", "Rafael B. Tauil", "Luiz Carlos Buiatte"]
   spec.email         = ["rodrigo@pittlandia.net", "rodrigo.tassinari@myfreecomm.com.br", "eduardo.hertz@myfreecomm.com.br", "rafael@tauil.com.br", "luiz.buiatte@nexaas.com"]
