@@ -8,6 +8,8 @@
 #   client.profile.get
 #
 class NexaasID::Client::Identity
+  attr_reader :credentials
+
   # Creates an instance of this client.
   #
   # @param [
@@ -40,7 +42,6 @@ class NexaasID::Client::Identity
 
   private
 
-  attr_reader :credentials
   attr_accessor :token
 
   ATTRIBUTES = %i[access_token refresh_token expires_at expires_in].freeze

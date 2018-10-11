@@ -26,4 +26,10 @@ describe NexaasID::Client::Identity do
       end
     end
   end
+
+  describe '#credentials' do
+    it 'returns the updated credentials' do
+      expect(subject.credentials).to eq(user_credentials)
+    end
+  end
 end

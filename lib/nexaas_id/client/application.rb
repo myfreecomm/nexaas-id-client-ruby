@@ -21,7 +21,7 @@ class NexaasID::Client::Application
 
   private
 
-  attr_reader :tokens, :credentials
+  attr_reader :tokens
 
   def client
     @client ||= NexaasID::Client::OAuth.build
