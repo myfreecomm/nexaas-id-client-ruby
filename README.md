@@ -56,7 +56,7 @@ end
 ## Usage
 
 The API can be used to access resources owned by an `Identity`, which requires previous authorization from the
-corresponding user (see the {omni_auth_nexaas_id gem}[https://rubygems.org/gems/omni_auth_nexaas_id]),
+corresponding user (see the [omni_auth_nexaas_id gem](https://rubygems.org/gems/omni_auth_nexaas_id)),
 or resources owned by an `Application`, which only requires the application's credentials.
 
 ### Resources owned by an Identity
@@ -76,16 +76,16 @@ Here, `user_crendentials` is an object that must have the following attributes a
 As long as these attributes are available, your object can be of any class (an `Active Record` object or a
 simple `OpenStruct`, for instance); the client won't make any assumptions about its nature. Your application is responsible
 for obtaining the initial values for these attributes (through the OAuth2 Authorization Flow, using the
-{omni_auth_nexaas_id gem}[https://rubygems.org/gems/omni_auth_nexaas_id]) and storing them as appropriate
+[omni_auth_nexaas_id gem](https://rubygems.org/gems/omni_auth_nexaas_id])) and storing them as appropriate
 (you might store them using a Users table for instance, or even in your user's session). The client WILL updated these
 attributes if the token has to be refreshed (Nexaas ID uses a TTL of 2 hours for access tokens) and your application
 needs to update its storage when that happens.
 
 #### Now you have access to the following endpoints:
 
-* [Profile API](TODO: doc link) as `client.profile`
-* [SignUp API](TODO: doc link) as `client.signup`
-* [Widget API](TODO: doc link) as `client.widget`
+* [Profile API](https://docs.id.nexaas.com/api/profile-data-routes) as `client.profile`
+* [SignUp API](https://docs.id.nexaas.com/api/invitation) as `client.signup`
+* [Widget API](https://docs.id.nexaas.com/api/widget) as `client.widget`
 
 #### Examples
 
@@ -127,7 +127,7 @@ client = NexaasID::Client::Application.new
 
 #### Now you have access to the following endpoints:
 
-* [SignUp API](TODO: doc link) as `client.signup`
+* [SignUp API](https://docs.id.nexaas.com/api/invitation) as `client.signup`
 
 #### Examples
 
