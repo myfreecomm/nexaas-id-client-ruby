@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe NexaasID::Configuration do
   subject do
-    described_class.configure do |c|
+    described_class.build do |c|
       c.url = 'http://some/where'
       c.user_agent = 'My App v1.0'
       c.application_token = 'some-app-token'

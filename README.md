@@ -40,12 +40,12 @@ This gem supports Ruby 2.1 or superior.
 
 Go to https://id.nexaas.com/applications and create a new application in your Nexaas ID account.
 
-### Use NexaasID.configure to setup your environment
+### Use NexaasID::Configuration.build to setup your environment
 
 ```ruby
 require 'nexaas_id'
 
-config = NexaasID::Configuration.configure do |c|
+config = NexaasID::Configuration.build do |c|
   c.url = 'https://sandbox.id.nexaas.com' # defaults to 'https://id.nexaas.com' if omitted
   c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
   c.application_token = 'your-application-token'
