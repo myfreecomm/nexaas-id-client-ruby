@@ -30,11 +30,4 @@ require "nexaas_id/resources/sign_up"
 require "nexaas_id/resources/widget"
 
 module NexaasID
-  def self.configuration
-    @configuration ||= Configuration.new
-  end
-
-  def self.configure
-    yield(configuration) if block_given?
-  end
 end

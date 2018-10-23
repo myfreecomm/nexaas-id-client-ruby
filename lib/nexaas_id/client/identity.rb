@@ -17,32 +17,33 @@ class NexaasID::Client::Identity
   #   #refresh_token, #refresh_token=,
   #   #expires_at, #expires_at=
   #   #expires_in, #expires_in=] The user credentials, obtained through the OAuth2 authorization flow.
-  def initialize(credentials)
+  def initialize(credentials, config)
     @credentials = credentials
+    @config = config
     @token = NexaasID::Client::ExceptionWrapper.new(OAuth2::AccessToken.from_hash(client, hash))
   end
 
   # Provides a Profile resource.
   # @return [NexaasID::Resources::Profile] the profile resource.
   def profile
-    NexaasID::Resources::Profile.new(api)
+    NexaasID::Resources::Profile.new(api, config)
   end
 
   # Provides a SignUp resource.
   # @return [NexaasID::Resources::SignUp] the signup resource.
   def sign_up
-    NexaasID::Resources::SignUp.new(api)
+    NexaasID::Resources::SignUp.new(api, config)
   end
 
   # Provides a Widget resource.
   # @return [NexaasID::Resources::Widget] the widget resource.
   def widget
-    NexaasID::Resources::Widget.new(api)
+    NexaasID::Resources::Widget.new(api, config)
   end
 
   private
 
-  attr_accessor :token
+  attr_accessor :config, :token
 
   ATTRIBUTES = %i[access_token refresh_token expires_at expires_in].freeze
 
@@ -51,7 +52,7 @@ class NexaasID::Client::Identity
   end
 
   def client
-    @client ||= NexaasID::Client::OAuth.build
+    @client ||= NexaasID::Client::OAuth.new(config)
   end
 
   def hash

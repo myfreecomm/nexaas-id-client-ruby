@@ -9,22 +9,23 @@
 #
 class NexaasID::Client::Application
 
-  def initialize
+  def initialize(config)
     @tokens = {}
+    @config = config
   end
 
   # Provides a SignUp resource.
   # @return [NexaasID::Resources::SignUp] the signup resource.
   def sign_up
-    NexaasID::Resources::SignUp.new(token(:invite))
+    NexaasID::Resources::SignUp.new(token(:invite), config)
   end
 
   private
 
-  attr_reader :tokens
+  attr_reader :config, :tokens
 
   def client
-    @client ||= NexaasID::Client::OAuth.build
+    @client ||= NexaasID::Client::OAuth.new(config)
   end
 
   def token(scope = nil)
