@@ -40,14 +40,27 @@ This gem supports Ruby 2.1 or superior.
 
 Go to https://id.nexaas.com/applications and create a new application in your Nexaas ID account.
 
-### Use NexaasID::Configuration.build to setup your environment
+### Use NexaasID.configure to setup your environment
 
 ```ruby
 require 'nexaas_id'
 
-config = NexaasID::Configuration.build do |c|
+NexaasID.configure do |c|
   c.url = 'https://sandbox.id.nexaas.com' # defaults to 'https://id.nexaas.com' if omitted
   c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
+  c.application_token = 'your-application-token'
+  c.application_secret = 'your-application-secret'
+end
+```
+
+Or, if you want to instantiate multiple application connections:
+
+```ruby
+require 'nexaas_id'
+
+config = NexaasID.Configuration.build do |c|
+  c.url = 'https://sandbox.id.nexaas.com'
+  c.user_agent = 'My App v1.0'
   c.application_token = 'your-application-token'
   c.application_secret = 'your-application-secret'
 end
@@ -62,6 +75,12 @@ or resources owned by an `Application`, which only requires the application's cr
 ### Resources owned by an Identity
 
 #### Create an instance of NexaasID::Client::Identity, as below:
+
+```ruby
+client = NexaasID::Client::Identity.new(user_credentials)
+```
+
+Or passing an explicit configuration:
 
 ```ruby
 client = NexaasID::Client::Identity.new(user_credentials, config)
@@ -90,7 +109,7 @@ needs to update its storage when that happens.
 #### Examples
 
 ```ruby
-client = NexaasID::Client::Identity.new(user_credentials, config)
+client = NexaasID::Client::Identity.new(user_credentials)
 
 profile_resource = client.profile
 
@@ -121,6 +140,13 @@ navbar_url = widget_resource.navbar_url
 
 #### Create an instance of NexaasID::Client::Application, as below:
 
+
+```ruby
+client = NexaasID::Client::Application.new
+```
+
+Or passing a explicit configuration:
+
 ```ruby
 client = NexaasID::Client::Application.new(config)
 ```
@@ -132,7 +158,7 @@ client = NexaasID::Client::Application.new(config)
 #### Examples
 
 ```ruby
-client = NexaasID::Client::Application.new(config)
+client = NexaasID::Client::Application.new
 
 sign_up_resource = client.sign_up
 
