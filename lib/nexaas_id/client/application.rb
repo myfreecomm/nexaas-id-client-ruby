@@ -9,9 +9,9 @@
 #
 class NexaasID::Client::Application
 
-  def initialize(config)
+  def initialize(config = nil)
     @tokens = {}
-    @config = config
+    @config = config || NexaasID.default_configuration
   end
 
   # Provides a SignUp resource.

@@ -17,9 +17,9 @@ class NexaasID::Client::Identity
   #   #refresh_token, #refresh_token=,
   #   #expires_at, #expires_at=
   #   #expires_in, #expires_in=] The user credentials, obtained through the OAuth2 authorization flow.
-  def initialize(credentials, config)
+  def initialize(credentials, config = nil)
     @credentials = credentials
-    @config = config
+    @config = config || NexaasID.default_configuration
     @token = NexaasID::Client::ExceptionWrapper.new(OAuth2::AccessToken.from_hash(client, hash))
   end
 

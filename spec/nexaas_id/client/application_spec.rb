@@ -1,14 +1,28 @@
 require 'spec_helper'
 
 describe NexaasID::Client::Application do
-  subject { described_class.new(configuration) }
+  describe 'implicit default configuration' do
+    subject { described_class.new }
 
-  let(:configuration) { default_configuration }
+    describe '#sign_up' do
+      it 'provides the signup resource' do
+        VCR.use_cassette('application/sign_up/client_credentials') do
+          expect(subject.sign_up).to be_a(NexaasID::Resources::SignUp)
+        end
+      end
+    end
+  end
 
-  describe '#sign_up' do
-    it 'provides the signup resource' do
-      VCR.use_cassette('application/sign_up/client_credentials') do
-        expect(subject.sign_up).to be_a(NexaasID::Resources::SignUp)
+  describe 'explicit configuration' do
+    subject { described_class.new(configuration) }
+
+    let(:configuration) { default_configuration }
+
+    describe '#sign_up' do
+      it 'provides the signup resource' do
+        VCR.use_cassette('application/sign_up/client_credentials') do
+          expect(subject.sign_up).to be_a(NexaasID::Resources::SignUp)
+        end
       end
     end
   end

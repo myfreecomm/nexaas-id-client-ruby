@@ -32,4 +32,12 @@ RSpec.configure do |c|
   c.example_status_persistence_file_path = '.rspec_persistence'
   c.include Authorization
   c.include ConfigurationHelper
+
+  c.before do
+    NexaasID.configure do |config|
+      config.url = ENV['NEXAAS_ID_URL']
+      config.application_token  = ENV['APPLICATION_TOKEN']
+      config.application_secret = ENV['APPLICATION_SECRET']
+    end
+  end
 end
