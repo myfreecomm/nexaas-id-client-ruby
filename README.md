@@ -45,7 +45,7 @@ Go to https://id.nexaas.com/applications and create a new application in your Ne
 ```ruby
 require 'nexaas_id'
 
-NexaasID.configure do |c|
+config = NexaasID::Configuration.configure do |c|
   c.url = 'https://sandbox.id.nexaas.com' # defaults to 'https://id.nexaas.com' if omitted
   c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
   c.application_token = 'your-application-token'
@@ -64,7 +64,7 @@ or resources owned by an `Application`, which only requires the application's cr
 #### Create an instance of NexaasID::Client::Identity, as below:
 
 ```ruby
-client = NexaasID::Client::Identity.new(user_credentials)
+client = NexaasID::Client::Identity.new(user_credentials, config)
 ```
 
 Here, `user_crendentials` is an object that must have the following attributes available for reading/writing:
@@ -90,7 +90,7 @@ needs to update its storage when that happens.
 #### Examples
 
 ```ruby
-client = NexaasID::Client::Identity.new(user_credentials)
+client = NexaasID::Client::Identity.new(user_credentials, config)
 
 profile_resource = client.profile
 
@@ -122,7 +122,7 @@ navbar_url = widget_resource.navbar_url
 #### Create an instance of NexaasID::Client::Application, as below:
 
 ```ruby
-client = NexaasID::Client::Application.new
+client = NexaasID::Client::Application.new(config)
 ```
 
 #### Now you have access to the following endpoints:
@@ -132,7 +132,7 @@ client = NexaasID::Client::Application.new
 #### Examples
 
 ```ruby
-client = NexaasID::Client::Application.new
+client = NexaasID::Client::Application.new(config)
 
 sign_up_resource = client.sign_up
 
