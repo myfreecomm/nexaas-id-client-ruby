@@ -1,12 +1,18 @@
 require 'spec_helper'
 
 describe NexaasID::Resources::Widget do
-  let(:client) { NexaasID::Client::Identity.new(user_credentials) }
+  let(:client) do
+    NexaasID::Client::Identity.new(
+      user_credentials(configuration),
+      configuration
+    )
+  end
+  let(:configuration) { default_configuration }
   let(:resource) { client.widget }
 
   describe "#navbar_url" do
     subject { resource.navbar_url }
-    let(:regexp) { %r(#{Regexp.quote(NexaasID.configuration.url)}/api/v1/widgets/navbar\?access_token=(.+?)$) }
+    let(:regexp) { %r(#{Regexp.quote(configuration.url)}/api/v1/widgets/navbar\?access_token=(.+?)$) }
 
     it 'returns the navbar url for this user' do
       VCR.use_cassette('identity/widget/navbar_url/success') do

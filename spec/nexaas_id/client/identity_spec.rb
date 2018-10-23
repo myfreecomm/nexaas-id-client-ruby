@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe NexaasID::Client::Identity do
-  subject { described_class.new(user_credentials) }
+  subject do
+    described_class.new(user_credentials(configuration), configuration)
+  end
+
+  let(:configuration) { default_configuration }
 
   describe '#profile' do
     it 'provides the profile resource' do
@@ -29,7 +33,7 @@ describe NexaasID::Client::Identity do
 
   describe '#credentials' do
     it 'returns the updated credentials' do
-      expect(subject.credentials).to eq(user_credentials)
+      expect(subject.credentials).to eq(user_credentials(configuration))
     end
   end
 end

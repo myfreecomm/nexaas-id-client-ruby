@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe NexaasID::Client::Application do
-  subject { described_class.new }
+  subject { described_class.new(configuration) }
+
+  let(:configuration) { default_configuration }
 
   describe '#sign_up' do
     it 'provides the signup resource' do
