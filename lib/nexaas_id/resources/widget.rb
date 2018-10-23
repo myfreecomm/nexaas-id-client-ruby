@@ -23,6 +23,6 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
   #
   # @return [String] user's navbar URL
   def navbar_url
-    %(#{NexaasID.configuration.url}/api/v1/widgets/navbar?access_token=#{api.token})
+    %(#{configuration.url}/api/v1/widgets/navbar?access_token=#{api.token})
   end
 end

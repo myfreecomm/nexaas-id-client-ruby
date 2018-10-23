@@ -5,7 +5,7 @@ describe NexaasID::Resources::SignUp do
 
   describe "#create" do
     describe 'with application client' do
-      let(:client) { NexaasID::Client::Application.new }
+      let(:client) { NexaasID::Client::Application.new(default_configuration) }
       subject { resource.create('demurtas@mailinator.com') }
 
       it 'invites an user' do
@@ -18,7 +18,10 @@ describe NexaasID::Resources::SignUp do
     end
 
     describe 'with identity client' do
-      let(:client) { NexaasID::Client::Identity.new(user_credentials) }
+      let(:client) do
+        configuration = default_configuration
+        NexaasID::Client::Identity.new(user_credentials(configuration), configuration)
+      end
       subject { resource.create('demurtas@mailinator.com') }
 
       it 'invites an user' do

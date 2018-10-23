@@ -53,6 +53,19 @@ NexaasID.configure do |c|
 end
 ```
 
+Or, if you want to instantiate multiple application connections:
+
+```ruby
+require 'nexaas_id'
+
+config = NexaasID.Configuration.build do |c|
+  c.url = 'https://sandbox.id.nexaas.com'
+  c.user_agent = 'My App v1.0'
+  c.application_token = 'your-application-token'
+  c.application_secret = 'your-application-secret'
+end
+```
+
 ## Usage
 
 The API can be used to access resources owned by an `Identity`, which requires previous authorization from the
@@ -65,6 +78,12 @@ or resources owned by an `Application`, which only requires the application's cr
 
 ```ruby
 client = NexaasID::Client::Identity.new(user_credentials)
+```
+
+Or passing an explicit configuration:
+
+```ruby
+client = NexaasID::Client::Identity.new(user_credentials, config)
 ```
 
 Here, `user_crendentials` is an object that must have the following attributes available for reading/writing:
@@ -121,8 +140,15 @@ navbar_url = widget_resource.navbar_url
 
 #### Create an instance of NexaasID::Client::Application, as below:
 
+
 ```ruby
 client = NexaasID::Client::Application.new
+```
+
+Or passing a explicit configuration:
+
+```ruby
+client = NexaasID::Client::Application.new(config)
 ```
 
 #### Now you have access to the following endpoints:

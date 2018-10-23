@@ -17,6 +17,7 @@ require 'vcr'
 require 'pry'
 require 'webmock/rspec'
 require 'support/authorization'
+require 'support/configuration_helper'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
@@ -30,13 +31,12 @@ RSpec.configure do |c|
   c.mock_with :rspec
   c.example_status_persistence_file_path = '.rspec_persistence'
   c.include Authorization
+  c.include ConfigurationHelper
 
   c.before do
     NexaasID.configure do |config|
-      # https://sandbox.id.nexaas.com/applications/89e9d504-e2a8-476e-ac94-c33e68399c7e
-      # Test application - luiz.buiatte+pw.api.test@nexaas.com
       config.url = ENV['NEXAAS_ID_URL']
-      config.application_token = ENV['APPLICATION_TOKEN']
+      config.application_token  = ENV['APPLICATION_TOKEN']
       config.application_secret = ENV['APPLICATION_SECRET']
     end
   end

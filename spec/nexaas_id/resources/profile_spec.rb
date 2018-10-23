@@ -1,7 +1,13 @@
 require 'spec_helper'
 
 describe NexaasID::Resources::Profile do
-  let(:client) { NexaasID::Client::Identity.new(user_credentials) }
+  let(:client) do
+    configuration = default_configuration
+    NexaasID::Client::Identity.new(
+      user_credentials(configuration),
+      configuration
+    )
+  end
   let(:resource) { client.profile }
 
   describe "#get" do

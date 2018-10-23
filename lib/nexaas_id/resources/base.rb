@@ -1,10 +1,13 @@
 # Default root for all resource classes.
 class NexaasID::Resources::Base
+  attr_reader :configuration
+
   # Creates an instance of this class.
   #
   # @param [api] api An instance of OAuth2::AccessToken
-  def initialize(api)
+  def initialize(api, config)
     @api = api
+    @configuration = config
   end
 
   protected

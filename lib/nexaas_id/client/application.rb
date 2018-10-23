@@ -1,3 +1,5 @@
+require_relative './base'
+
 # Nexaas ID Client for resources not owned by an Identity
 #
 # [API]
@@ -7,25 +9,21 @@
 #   client = NexaasID::Client::Application.new
 #   client.sign_up.create(invited: 'john.doe@example.com')
 #
-class NexaasID::Client::Application
-
-  def initialize
+class NexaasID::Client::Application < NexaasID::Client::Base
+  def initialize(config = nil)
+    super(config)
     @tokens = {}
   end
 
-  # Provides a SignUp resource.
-  # @return [NexaasID::Resources::SignUp] the signup resource.
-  def sign_up
-    NexaasID::Resources::SignUp.new(token(:invite))
+  protected
+
+  def api_token
+    token(:invite)
   end
 
   private
 
   attr_reader :tokens
-
-  def client
-    @client ||= NexaasID::Client::OAuth.build
-  end
 
   def token(scope = nil)
     token = tokens[scope]
