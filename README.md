@@ -8,7 +8,7 @@ This is the official Ruby client for the [Nexaas ID](https://id.nexaas.com) API.
 [![Code Climate Grade](https://codeclimate.com/github/myfreecomm/nexaas-id-client-ruby.png)](https://codeclimate.com/github/myfreecomm/nexaas-id-client-ruby)
 [![Inline docs](http://inch-ci.org/github/myfreecomm/nexaas-id-client-ruby.svg)](http://inch-ci.org/github/myfreecomm/nexaas-id-client-ruby)
 
-Nexaas ID API docs: https://id.nexaas.com/static/docs/
+Nexaas ID API docs: https://docs.id.nexaas.com/
 
 nexaas-id-client-ruby RDoc documentation: http://rubydoc.info/github/myfreecomm/nexaas-id-client-ruby/frames/
 
