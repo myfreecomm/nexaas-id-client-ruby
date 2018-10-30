@@ -33,7 +33,7 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
   #   Documentation:
   #
   # @return [String] user's widget URL
-  def widget_url
-    %(#{configuration.url}/api/v1/widgets/user.js?access_token=#{api.token}&callback=initWidget)
+  def widget_url(callback = 'initWidget')
+    %(#{configuration.url}/api/v1/widgets/user.js?access_token=#{api.token}&callback=#{callback})
   end
 end
