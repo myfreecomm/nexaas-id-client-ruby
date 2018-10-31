@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nexaas_id-client (0.7.1)
+    nexaas_id-client (0.7.2)
       multi_json (~> 1.11)
       oauth2 (~> 1.4.0)
       virtus (~> 1.0)
