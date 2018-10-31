@@ -28,7 +28,7 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
     querystring =
       if access_token
         {access_token: access_token}
-      elseif redirect_uri
+      elsif redirect_uri
         {
           client_id: configuration.application_token,
           redirect_uri: redirect_uri
