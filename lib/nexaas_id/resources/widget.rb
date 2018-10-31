@@ -13,7 +13,6 @@
 #
 # @see NexaasID::Client::Identity#initialize
 class NexaasID::Resources::Widget < NexaasID::Resources::Base
-
   # Retrieves the user's navbar URL
   #
   # [API]
@@ -24,5 +23,17 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
   # @return [String] user's navbar URL
   def navbar_url
     %(#{configuration.url}/api/v1/widgets/navbar?access_token=#{api.token})
+  end
+
+  # Retrieves the user's widget URL
+  #
+  # [API]
+  #   Method: <tt>GET /api/v1/widgets/user</tt>
+  #
+  #   Documentation:
+  #
+  # @return [String] user's widget URL
+  def widget_url(callback = 'initWidget')
+    %(#{configuration.url}/api/v1/widgets/user.js?access_token=#{api.token}&callback=#{callback})
   end
 end

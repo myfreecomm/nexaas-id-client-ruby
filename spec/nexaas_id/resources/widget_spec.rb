@@ -21,4 +21,16 @@ describe NexaasID::Resources::Widget do
       end
     end
   end
+
+  describe "widget_url" do
+    subject { resource.widget_url }
+    let(:regexp) { %r(#{Regexp.quote(configuration.url)}/api/v1/widgets/user.js\?access_token=(.+?)&callback=initWidget$) }
+
+    it 'returns the navbar url for this user' do
+      VCR.use_cassette('identity/widget/widget_url/success') do
+        expect(subject).to match(regexp)
+        expect(Faraday.get(subject).status).to eq(200)
+      end
+    end
+  end
 end
