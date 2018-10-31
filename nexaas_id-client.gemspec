@@ -35,8 +35,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 3.4'
   spec.add_development_dependency "pry-byebug", "~> 3.4"
   spec.add_development_dependency "awesome_print", "~> 1.8"
-  spec.add_development_dependency "simplecov", "~> 0.14"
-  spec.add_development_dependency "coveralls", "~> 0.8"
+  spec.add_development_dependency "simplecov", "~> 0.16"
+  spec.add_development_dependency "coveralls", "~> 0.8.22"
   spec.add_development_dependency "json", "~> 2.1"
   spec.add_development_dependency "faraday-cookie_jar", "~> 0.0.6"
   spec.add_development_dependency "dotenv", "~> 2.5.0"
