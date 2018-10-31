@@ -1,3 +1,5 @@
+require 'addressable/uri'
+
 # A wrapper to Nexaas ID's widget API
 #
 # [API]
@@ -21,8 +23,23 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
   #   Documentation:
   #
   # @return [String] user's navbar URL
-  def navbar_url
-    %(#{configuration.url}/api/v1/widgets/navbar?access_token=#{api.token})
+  def navbar_url(redirect_uri = nil)
+    access_token = api.token
+    querystring =
+      if access_token
+        {access_token: access_token}
+      elseif redirect_uri
+        {
+          client_id: configuration.application_token,
+          redirect_uri: redirect_uri
+        }
+      else
+        nil
+      end
+    uri = Addressable::URI.parse(configuration.url)
+    uri.path = '/api/v1/widgets/navbar'
+    uri.query_values = querystring
+    uri.to_s
   end
 
   # Retrieves the user's widget URL

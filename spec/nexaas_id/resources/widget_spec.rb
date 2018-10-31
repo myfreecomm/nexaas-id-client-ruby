@@ -10,7 +10,7 @@ describe NexaasID::Resources::Widget do
   let(:configuration) { default_configuration }
   let(:resource) { client.widget }
 
-  describe "#navbar_url" do
+  describe '#navbar_url' do
     subject { resource.navbar_url }
     let(:regexp) { %r(#{Regexp.quote(configuration.url)}/api/v1/widgets/navbar\?access_token=(.+?)$) }
 
@@ -22,7 +22,7 @@ describe NexaasID::Resources::Widget do
     end
   end
 
-  describe "widget_url" do
+  describe '#widget_url' do
     subject { resource.widget_url }
     let(:regexp) { %r(#{Regexp.quote(configuration.url)}/api/v1/widgets/user.js\?access_token=(.+?)&callback=initWidget$) }
 
