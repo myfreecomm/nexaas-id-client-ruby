@@ -1,11 +1,7 @@
 PATH
   remote: .
   specs:
-<<<<<<< Updated upstream
     nexaas_id-client (0.7.2)
-=======
-    nexaas_id-client (0.7.1)
->>>>>>> Stashed changes
       multi_json (~> 1.11)
       oauth2 (~> 1.4.0)
       virtus (~> 1.0)
