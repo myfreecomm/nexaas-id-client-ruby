@@ -26,7 +26,7 @@ class NexaasID::Resources::Widget < NexaasID::Resources::Base
   def navbar_url(redirect_uri = nil)
     access_token = api.token
     querystring =
-      if access_token
+      if access_token && !access_token.empty?
         { access_token: access_token }
       elsif redirect_uri
         {
