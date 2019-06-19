@@ -8,6 +8,7 @@
 .env
 .rspec_persistence
 .ruby-version
+.ruby-gemset
 .rvmrc
 coverage
 InstalledFiles
